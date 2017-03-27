@@ -14,7 +14,10 @@ RUN apt-get install -y \
 	software-properties-common \
 	gdebi-core \
 	time \
-	libssl1.0.0
+	libssl1.0.0 \
+	vim \
+	python-pip
+	
 
 # ==================
 # JAVA =============
@@ -126,7 +129,7 @@ RUN cd /srv/shiny-server; git clone https://github.com/mmondelli/swift-prof.git
 # PYTHON PACKAGES ==
 # ==================
 
-RUN apt-get -y install python-pip; pip install numpy scipy
+RUN pip install numpy scipy
 RUN pip install biopython
 
 
