@@ -94,6 +94,7 @@ ENV PATH "$PATH":/usr/local/tabix-0.2.6:.:
 RUN cd /usr/local; wget https://sourceforge.net/projects/vcftools/files/vcftools_0.1.13.tar.gz && \
 	tar xvfz vcftools_0.1.13.tar.gz; cd vcftools_0.1.13; make 
 ENV PATH "$PATH":/usr/local/vcftools_0.1.13/bin:.:
+ENV PERL5LIB "$PERL5LIB":/usr/local/vcftools_0.1.13/lib/perl5/site_perl:
 
 # BOWTIE 2.1.0 =====
 
